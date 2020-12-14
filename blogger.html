@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru" class="base-styles">
+
+<head>
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+<div class="message js-success">
+    Спасибо!
+</div>
+
+
+<form action="" class="js-form">
+    <div class="subscribe-submit_text" style="display: none">
+        <h5>Поздравляем!</h5>
+        Вы будете в&nbsp;числе первых, кто узнает о старте Black Friday.
+    </div>
+    <div class="subscribe-error" style="display: none">
+        Проверьте, пожалуйста, верно&nbsp;ли вы&nbsp;заполнили поля.
+    </div>
+
+    <div class="subscribe-form">
+        <input class="subscribe-input_text js-email" type="text" placeholder="Ваш e-mail *" name="Email">
+    </div>
+    <div class="subscribe-button_block">
+        <input class="subscribe-button" type="submit" value="ПОДПИСАТЬСЯ">
+    </div>
+    <div class="subscribe-checkbox_block">
+        <input type="checkbox" name="accepted" id="accepted" value="1" checked class="picker-element">
+        <label for="accepted">
+            Я принимаю <a href="https://www.mac-cosmetics.ru/terms-conditions" target="_blank">Условия продажи</a>, <a href="https://www.mac-cosmetics.ru/term-of-use" target="_blank">Условия использования</a> и&nbsp;<a href="https://www.mac-cosmetics.ru/privacy-policy" target="_blank">Конфиденциальность</a>
+        </label>
+    </div>
+    <div class="subscribe-checkbox_block">
+        <input type="checkbox" name="subscribe" id="subscribe" checked value="1" class="picker-element">
+        <label for="subscribe">
+            Да, я&nbsp;хочу получать от&nbsp;M·A·C SMS и&nbsp;email-рассылки о&nbsp;спецпредложениях, эксклюзивные анонсы новинок и&nbsp;последние новости.
+        </label>
+    </div>
+    <input type="hidden" name="nospam" />
+    <input type="hidden" name="type" value="2" />
+</form>
+
+
+<script src="vendor.js"></script>
+<script src="main.js"></script>
+</body>
+
+</html>
