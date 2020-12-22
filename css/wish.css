@@ -1,0 +1,253 @@
+.wish {
+  background-color: rgb(25, 65, 88);
+  padding: 5em 0 10em;
+}
+
+.wish .hover-me-text {
+  text-align: center;
+  font-size: 48px;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.wish .cracker {
+  width: 40.625em;
+  height: 6.25em;
+  margin: 3.25em auto 0;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wish .cracker:hover .cracker-left {
+  left: -7.5em;
+  top: 3.125em;
+  -webkit-transform: rotate(-15deg);
+  transform: rotate(-15deg);
+}
+
+.wish .cracker:hover .cracker-right {
+  right: -7.5em;
+  top: 3.125em;
+  -webkit-transform: rotate(15deg);
+  transform: rotate(15deg);
+}
+
+.wish .cracker-left,
+.wish .cracker-right {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background-color: #da1d1b;
+}
+
+.wish .cracker-left {
+  left: 0;
+}
+
+.wish .cracker-right {
+  right: 0;
+}
+
+.wish.cracker-left-inner,
+.wish .cracker-right-inner {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.wish .cracker-left-inner:before,
+.wish .cracker-right-inner:before {
+  content: "";
+  height: 100%;
+  width: 0.625em;
+  background-color: #ad1715;
+  position: absolute;
+  z-index: 10;
+  border-radius: 50%;
+}
+
+.wish .cracker-left-inner:before {
+  left: -0.3125em;
+  top: 0;
+}
+
+.wish .cracker-right-inner:before {
+  right: -0.3125em;
+  top: 0;
+}
+
+.wish .cracker-message {
+  padding: 0.9375em 0;
+  width: 30%;
+  margin: 0 auto;
+}
+.wish .cracker-message .cracker-message__inner {
+  padding: 0.625em;
+  background: #ececec;
+  color: #6c6c6c;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 1px solid #d7d7d7;
+  font-size: 14px;
+}
+
+.wish .cracker-left__tail,
+.wish .cracker-left__end,
+.wish .cracker-left__body,
+.wish .cracker-right__tail,
+.wish .cracker-right__end,
+.wish .cracker-right__body,
+.wish .cracker-left__mask-top,
+.wish .cracker-left__mask-bottom,
+.wish .cracker-right__mask-top,
+.wish .cracker-right__mask-bottom {
+  position: absolute;
+}
+
+.wish .cracker-left__tail {
+  left: 0;
+}
+
+.wish .cracker-right__tail {
+  right: 0;
+}
+
+.wish .cracker-left__tail,
+.wish .cracker-right__tail {
+  width: 6.25em;
+  height: 100%;
+  background-color: #e74241;
+}
+
+.wish .cracker-left__end,
+.wish .cracker-right__end {
+  width: 1.25em;
+  height: 100%;
+  background-color: #ad1715;
+}
+.wish .cracker-left__end:before,
+.wish .cracker-right__end:before {
+  content: "";
+  height: 3.4375em;
+  width: 0.9375em;
+  background-color: #ffb20f;
+  position: absolute;
+  top: 1.3125em;
+  z-index: 15;
+  border: 0.0625em solid #f5a600;
+  border-radius: 0.3125em;
+}
+
+.wish .cracker-left__end {
+  left: 6.25em;
+}
+.wish .cracker-left__end:before {
+  left: -0.625em;
+}
+
+.wish .cracker-right__end {
+  right: 6.25em;
+}
+
+.wish .cracker-right__end:before {
+  right: -0.625em;
+}
+
+.wish .cracker-left__mask-top,
+.wish .cracker-left__mask-bottom,
+.wish .cracker-right__mask-top,
+.wish .cracker-right__mask-bottom {
+  z-index: 10;
+}
+
+.wish .cracker-left__mask-top,
+.wish .cracker-left__mask-bottom,
+.wish .cracker-right__mask-top,
+.wish .cracker-right__mask-bottom {
+  width: 8.75em;
+  height: 1.5625em;
+}
+
+.wish .cracker-left__mask-top,
+.wish .cracker-left__mask-bottom {
+  left: 1.875em;
+}
+
+.wish .cracker-right__mask-top,
+.wish .cracker-right__mask-bottom {
+  right: 1.875em;
+}
+
+.wish .cracker-left__mask-top,
+.wish .cracker-right__mask-bottom {
+  height: 0;
+  width: 0;
+  border-left: 4.375em solid transparent;
+  border-right: 2.375em solid transparent;
+  border-top: 4.375em solid rgb(25, 65, 88);
+}
+
+.wish .cracker-left__mask-bottom,
+.wish .cracker-right__mask-top {
+  height: 0;
+  width: 0;
+  border-left: 4.375em solid transparent;
+  border-right: 2.375em solid transparent;
+  border-bottom: 4.375em solid rgb(25, 65, 88);
+}
+
+.wish .cracker-left__mask-top,
+.wish .cracker-right__mask-top {
+  top: -2.1875em;
+}
+
+.wish .cracker-right__mask-top {
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+
+.wish .cracker-right__mask-bottom {
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+
+.wish .cracker-left__mask-bottom,
+.wish .cracker-right__mask-bottom {
+  bottom: -2.1875em;
+}
+
+.wish .cracker-left-zigzag {
+  position: absolute;
+  right: -1px;
+  top: 0;
+  height: 100%;
+}
+
+.wish .cracker-left-zigzag .cracker-left-zigzag__item {
+  height: 0;
+  width: 0;
+  border-bottom: 0.625em solid transparent;
+  border-right: 0.625em solid rgb(25, 65, 88);
+  border-top: 0.625em solid transparent;
+}
+
+.wish .cracker-right-zigzag {
+  position: absolute;
+  left: -0.625em;
+  top: 0;
+  height: 100%;
+}
+
+.wish .cracker-right-zigzag .cracker-right-zigzag__item {
+  height: 0;
+  width: 0;
+  border-bottom: 0.625em solid transparent;
+  border-right: 0.625em solid #da1d1b;
+  border-top: 0.625em solid transparent;
+}
