@@ -1,0 +1,22 @@
+body {
+  background-image: url("../images/bg/snow1.png"), url("../images/bg/snow2.png"),
+    url("../images/bg/snow3.png"), url("../images/bg/JuleBg.png");
+  -webkit-animation: bgsnow 10s linear infinite;
+  -moz-animation: bgsnow 10s linear infinite;
+  -ms-animation: bgsnow 10s linear infinite;
+  -o-animation: bgsnow 10s linear infinite;
+  animation: bgsnow 10s linear infinite;
+  background-position: top center;
+}
+
+@keyframes bgsnow {
+  0% {
+    background-position: 0 0, 0 0, 0 0, 0 0;
+  }
+  50% {
+    background-position: 0 250px, 0 200px, 0 150px, 0 0;
+  }
+  100% {
+    background-position: 0 500px, 0 400px, 0 300px, 0 0;
+  }
+}
