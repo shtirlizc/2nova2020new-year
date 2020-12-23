@@ -1,0 +1,68 @@
+.input {
+  position: relative;
+}
+
+.input input,
+.input textarea {
+  border: none;
+  box-shadow: none;
+  outline: none;
+
+  background-color: white;
+  border-radius: 2px;
+  height: 60px;
+  width: 100%;
+  padding: 0 20px;
+  color: #555;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 0 1px transparent;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.input textarea {
+  height: 200px;
+  padding: 10px 20px;
+}
+
+.input input + label,
+.input textarea + label {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+  color: #4a89dc;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.input textarea + label {
+  padding: 10px 20px;
+  align-items: flex-start;
+}
+
+.input input:focus,
+.input textarea:focus {
+  box-shadow: 0 0 0 1px #333;
+}
+
+.input input:focus + label,
+.input textarea:focus + label {
+  transform: translate(10px);
+  opacity: 0;
+}
+
+.input input:valid + label,
+.input input:invalid:not(:placeholder-shown) + label,
+.input textarea:valid + label,
+.input textarea:invalid:not(:placeholder-shown) + label {
+  transform: translate(10px);
+  opacity: 0;
+}

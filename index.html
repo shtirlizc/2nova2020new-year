@@ -88,8 +88,39 @@
       </div>
     </div>
 
-    <div class="send">
-      <div class="loading">
+    <div class="form">
+      <h3 class="form__title">Напишите пожелание коллеге</h3>
+      <div class="form__items">
+        <div class="form__item">
+          <div class="input">
+            <input type="text" name="from" id="from" placeholder=" " required />
+            <label for="from">От кого</label>
+          </div>
+        </div>
+        <div class="form__item">
+          <div class="input">
+            <input type="text" name="to" id="to" placeholder=" " required />
+            <label for="to">Кому</label>
+          </div>
+        </div>
+        <div class="form__item">
+          <div class="input">
+            <textarea
+              name="message"
+              id="message"
+              placeholder=" "
+              required
+            ></textarea>
+            <label for="message">Пожелание</label>
+          </div>
+        </div>
+        <div class="form__item">
+          <button type="submit" class="btn">Отправить</button>
+        </div>
+      </div>
+    </div>
+
+    <!--<div class="loading">
         <svg
           class="mainSVG"
           viewBox="0 0 600 600"
@@ -208,8 +239,7 @@
             y2="314"
           />
         </svg>
-      </div>
-    </div>
+      </div>-->
 
     <div class="_tree">
       <input id="slow" type="radio" value="slow" name="pattern" class="radio" />
