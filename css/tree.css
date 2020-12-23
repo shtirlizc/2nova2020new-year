@@ -20,6 +20,8 @@
   --light-classic-secondary: rgb(182, 52, 46);
   --light-white: rgb(250, 250, 250);
   --light-white-secondary: rgb(160, 160, 160);
+  --light-cream: palegoldenrod;
+  --light-cream-secondary: lightgoldenrodyellow;
   --speed: 3s;
   --speedInvert: -3s;
   --width: 2rem;
@@ -31,7 +33,7 @@
 ._tree {
   position: relative;
   overflow: hidden;
-  width: 100vw;
+  width: 100%;
   max-width: 100vw;
   height: 100vh;
   overflow: hidden;
@@ -119,6 +121,7 @@
 
 .radio {
   position: absolute;
+  bottom: 0;
   width: 1px;
   height: 1px;
   padding: 0;
@@ -1167,7 +1170,7 @@
   }
 }
 .settings {
-  position: fixed;
+  position: absolute;
   left: 50%;
   width: 24rem;
   max-width: 100vw;
@@ -1179,7 +1182,7 @@
   font-size: 0.9rem;
   padding: 1rem;
   -webkit-transform: translate3d(-50%, calc(100% - 2.75rem), 0);
-  transform: translate3d(-50%, calc(100% - 2.75rem), 0);
+  transform: translate3d(75%, calc(100% - 2.75rem), 0);
   -webkit-transition: -webkit-transform 250ms;
   transition: -webkit-transform 250ms;
   transition: transform 250ms;
@@ -1194,8 +1197,8 @@
 }
 .settings:hover,
 .settings:focus {
-  -webkit-transform: translate3d(-50%, 0, 0);
-  transform: translate3d(-50%, 0, 0);
+  -webkit-transform: translate3d(75%, 0, 0);
+  transform: translate3d(75%, 0, 0);
 }
 .radio[value="slow"]:hover ~ .settings .label[for="slow"],
 .radio[value="slow"]:focus ~ .settings .label[for="slow"] {
@@ -1379,7 +1382,7 @@
   letter-spacing: 0.05rem;
   width: 100%;
   -webkit-text-decoration: underine;
-  text-decoration: underine;
+  text-decoration: underline;
   margin-top: 1.5rem;
 }
 .title.h1 {

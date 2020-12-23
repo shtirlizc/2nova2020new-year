@@ -1,6 +1,5 @@
 .loading {
-  background-color: #111;
-  background-image: linear-gradient(rgb(25, 65, 88), rgb(5, 14, 23));
+  background-image: linear-gradient(to bottom, rgb(25, 65, 88), rgb(5, 14, 23));
   overflow: hidden;
   text-align: center;
   display: flex;
