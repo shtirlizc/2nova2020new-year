@@ -90,34 +90,48 @@
 
     <div class="form">
       <h3 class="form__title">Напишите пожелание коллеге</h3>
-      <div class="form__items">
+      <form action="" class="form__items" id="js-form">
         <div class="form__item">
           <div class="input">
-            <input type="text" name="from" id="from" placeholder=" " required />
-            <label for="from">От кого</label>
+            <input
+              type="text"
+              name="from"
+              id="form-from"
+              placeholder=" "
+              required
+              class="js-from"
+            />
+            <label for="form-from">От кого</label>
           </div>
         </div>
         <div class="form__item">
           <div class="input">
-            <input type="text" name="to" id="to" placeholder=" " required />
-            <label for="to">Кому</label>
+            <input
+              type="text"
+              name="to"
+              id="form-to"
+              placeholder=" "
+              required
+              class="js-to"
+            />
+            <label for="form-to">Кому</label>
           </div>
         </div>
         <div class="form__item">
           <div class="input">
             <textarea
               name="message"
-              id="message"
+              id="form-message"
               placeholder=" "
               required
             ></textarea>
-            <label for="message">Пожелание</label>
+            <label for="form-message">Пожелание</label>
           </div>
         </div>
         <div class="form__item">
           <button type="submit" class="btn">Отправить</button>
         </div>
-      </div>
+      </form>
     </div>
 
     <!--<div class="loading">
@@ -476,7 +490,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="js/app.js"></script>
-    <script src="vendor.js"></script>
-    <script src="main.js"></script>
+    <!--<script src="vendor.js"></script>
+    <script src="main.js"></script>-->
   </body>
 </html>
