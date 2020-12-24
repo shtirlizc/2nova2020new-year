@@ -2,12 +2,18 @@
   position: relative;
 }
 
+.input.has-error input,
+.input.has-error textarea {
+  border: 2px solid tomato;
+  background-color: cornsilk;
+}
+
 .input input,
 .input textarea {
-  border: none;
   box-shadow: none;
   outline: none;
 
+  border: 2px solid transparent;
   background-color: white;
   border-radius: 2px;
   height: 60px;
@@ -17,8 +23,7 @@
   font-size: 20px;
   display: flex;
   align-items: center;
-  box-shadow: 0 0 0 1px transparent;
-  transition: box-shadow 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .input textarea {

@@ -10,20 +10,22 @@ class Ajax
     public function onSubscribe()
     {
         $message = 'error';
-        if (isset($_POST['email']) && isset($_POST['subscribe']) && isset($_POST['nospam']) && $_POST['nospam'] === self::NOSPAM && isset($_POST['type'])) {
-            $email = '"' . trim(strip_tags($_POST['email'])) . '"';
+        if (isset($_POST['from']) && isset($_POST['to']) && isset($_POST['message']) && isset($_POST['subscribe']) && isset($_POST['nospam']) && $_POST['nospam'] === self::NOSPAM && isset($_POST['type'])) {
+            $from = '"' . trim(strip_tags($_POST['from'])) . '"';
+            $to = '"' . trim(strip_tags($_POST['to'])) . '"';
+            $message = '"' . trim(strip_tags($_POST['message'])) . '"';
             $isSubscribe = '"' . trim(strip_tags($_POST['subscribe'])) . '"';
-            $type = $_POST['type'];
 
             $arr = [
-                $email,
-                $isSubscribe,
+                $from,
+                $to,
+                $message,
                 date('d.m.Y H:i:s')
             ];
 
             $string = implode(';', $arr) .  "\n";
 
-            $filename = __DIR__ . '/storage/data' . $type . '.csv';
+            $filename = __DIR__ . '/storage/data.csv';
             if (file_exists($filename) && file_put_contents($filename, $string, FILE_APPEND | LOCK_EX)) {
                 $message = 'success';
             }
