@@ -14,6 +14,20 @@ const Loading = {
   },
 };
 
+const ShowScreen = {
+  success: function () {
+    $("#js-success").slideDown(250);
+    $(".form").slideUp(250);
+
+    $("html, body").animate(
+      {
+        scrollTop: $("#js-success").offset().top,
+      },
+      350
+    );
+  },
+};
+
 window.addEventListener("load", (event) => {
   Loading.init();
 });

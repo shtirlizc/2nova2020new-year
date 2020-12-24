@@ -122,8 +122,9 @@
   };
 
   Form.prototype.success = function () {
-    this.$form.hide();
-    this.$success.show();
+    // this.$form.hide();
+    // this.$success.show();
+    ShowScreen.success();
   };
 
   Form.prototype.error = function () {
