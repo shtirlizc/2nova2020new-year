@@ -1405,6 +1405,7 @@
   transition: -webkit-transform 250ms;
   transition: transform 250ms;
   transition: transform 250ms, -webkit-transform 250ms;
+  line-height: 1.2em;
 }
 .label.color {
   display: -webkit-box;
