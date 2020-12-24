@@ -1,4 +1,5 @@
 .fly {
+  overflow: hidden;
   display: none;
 }
 
