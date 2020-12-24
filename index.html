@@ -713,7 +713,19 @@
       </div>
     </div>
 
-    <audio src="audio/music-1.mp3" autoplay loop>
+    <div id="js-music" class="music">
+      <div class="music__buttons">
+        <div class="music__play" data-target="0">play classic</div>
+        <div class="music__play" data-target="1">play undergroud</div>
+        <div class="music__play" data-target="2">play hard</div>
+      </div>
+
+      <div class="music__items">
+        <audio src="audio/music-0.mp3" preload="none" />
+        <audio src="audio/music-1.mp3" preload="none" />
+        <audio src="audio/music-2.mp3" preload="none" />
+      </div>
+    </div>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"

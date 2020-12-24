@@ -1,0 +1,24 @@
+.music {
+  position: fixed;
+  left: 40px;
+  bottom: 0;
+}
+
+.music__buttons {
+  display: flex;
+}
+
+.music__play {
+  padding: 20px;
+  background-color: yellowgreen;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.music__play:hover {
+  color: mediumvioletred;
+}
+
+.music__play:not(:last-child) {
+  margin-right: 20px;
+}

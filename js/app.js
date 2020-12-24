@@ -28,6 +28,22 @@ const ShowScreen = {
   },
 };
 
+const Music = {
+  play: function () {
+    $(".music__play").click(function () {
+      const target = $(this).data("target");
+
+      console.log(target);
+
+      $(".music__items audio").each(function () {
+        $(this)[0].pause();
+      });
+      $(".music__items audio")[Number(target)].play();
+    });
+  },
+};
+
 window.addEventListener("load", (event) => {
   Loading.init();
+  Music.play();
 });
