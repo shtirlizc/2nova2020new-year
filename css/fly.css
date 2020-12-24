@@ -27,16 +27,17 @@
   font-size: 32px;
 }
 
-svg {
+.fly svg {
   position: absolute;
   top: 0;
   left: 0;
 }
-.plane {
+.fly .plane {
   position: relative;
   -webkit-animation: float 3s infinite;
   animation: float 3s infinite;
 }
+
 @-webkit-keyframes float {
   50% {
     -webkit-transform: translateY(25px);
@@ -49,7 +50,7 @@ svg {
     transform: translateY(25px);
   }
 }
-.hand {
+.fly .hand {
   -webkit-transform: rotate(10deg);
   -ms-transform: rotate(10deg);
   transform: rotate(10deg);
@@ -59,7 +60,7 @@ svg {
   -ms-transform-origin: center;
   transform-origin: center;
 }
-.blade {
+.fly .blade {
   -webkit-animation: spin 1s infinite linear;
   animation: spin 1s infinite linear;
   -webkit-transform-origin: 50% 54%;
@@ -90,7 +91,7 @@ svg {
     transform: rotate(-10deg);
   }
 }
-a {
+.fly a {
   color: #f40009;
   font-family: "Poppins", sans-serif;
   position: absolute;
