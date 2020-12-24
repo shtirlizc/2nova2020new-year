@@ -10,10 +10,17 @@
 }
 
 .form__title {
+  text-align: center;
+  padding: 0 20px;
+}
+
+.form__title p {
   font-size: 32px;
+  margin: 0;
 }
 
 .form__items {
+  margin-top: 50px;
 }
 
 .form__item {

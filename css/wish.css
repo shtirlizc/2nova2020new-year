@@ -5,7 +5,8 @@
 
 .wish .hover-me-text {
   text-align: center;
-  font-size: 48px;
+  font-size: 42px;
+  line-height: 1.2em;
   color: white;
   margin-bottom: 30px;
 }
