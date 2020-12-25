@@ -1,6 +1,7 @@
 .wish {
   background-color: rgb(25, 65, 88);
   padding: 5em 0 10em;
+  overflow: hidden;
 }
 
 .wish .hover-me-text {
@@ -9,6 +10,12 @@
   line-height: 1.2em;
   color: white;
   margin-bottom: 30px;
+}
+
+@media (max-width: 750px) {
+  .wish .hover-me-text {
+    font-size: 24px;
+  }
 }
 
 .wish .cracker {
@@ -20,6 +27,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 750px) {
+  .wish .cracker {
+    transform: scale(0.5);
+    width: calc(200vw - 20px);
+    margin-left: calc(-50vw + 10px);
+  }
 }
 
 .wish .cracker__label {

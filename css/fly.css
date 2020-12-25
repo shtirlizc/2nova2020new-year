@@ -26,6 +26,8 @@
   transform: translateY(100px);
   color: white;
   font-size: 32px;
+  line-height: 1.2em;
+  text-align: center;
 }
 
 .fly svg {

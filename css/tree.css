@@ -1167,7 +1167,7 @@
   font-size: 0.9rem;
   padding: 1rem;
   -webkit-transform: translate3d(-50%, calc(100% - 2.75rem), 0);
-  transform: translate3d(75%, calc(100% - 2.75rem), 0);
+  transform: translate3d(-50%, calc(100% - 2.75rem), 0);
   -webkit-transition: -webkit-transform 250ms;
   transition: -webkit-transform 250ms;
   transition: transform 250ms;
@@ -1183,8 +1183,8 @@
   }
 }
 .settings.active {
-  -webkit-transform: translate3d(75%, 0, 0);
-  transform: translate3d(75%, 0, 0);
+  -webkit-transform: translate3d(-50%, 0, 0);
+  transform: translate3d(-50%, 0, 0);
 }
 
 .radio[value="slow"]:hover ~ .settings .label[for="slow"],

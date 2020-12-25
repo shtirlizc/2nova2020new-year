@@ -1,5 +1,5 @@
 .loading {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   overflow: hidden;
@@ -13,6 +13,7 @@
   padding: 0;
   transform: translateZ(0);
   background-color: forestgreen;
+  z-index: 11;
 }
 
 svg {

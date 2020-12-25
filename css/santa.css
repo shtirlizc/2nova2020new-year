@@ -4,6 +4,7 @@
   place-items: center;
   min-height: 100vh;
   padding: 100px 0 250px;
+  overflow: hidden;
 }
 
 .start::after {
@@ -331,13 +332,21 @@
 
 .start__desc {
   margin-top: 40px;
+  max-width: 100vw;
+  padding: 0 20px;
 }
 
 .start__desc p {
   font-size: 40px;
-
   line-height: 1.6em;
   margin: 0;
+}
+
+@media (max-width: 750px) {
+  .start__desc p {
+    font-size: 24px;
+    line-height: 1.4em;
+  }
 }
 
 .start__copyright {
@@ -348,6 +357,7 @@
 .start__copyright a {
   color: #f7be10;
   opacity: 0.8;
+  white-space: nowrap;
   transition: opacity 0.2s ease-in-out;
 }
 .start__copyright a:hover {

@@ -5,8 +5,23 @@
   z-index: 10;
 }
 
+@media (max-width: 750px) {
+  .music {
+    left: auto;
+    right: 0;
+    bottom: auto;
+    top: 20px;
+  }
+}
+
 .music__buttons {
   display: flex;
+}
+
+@media (max-width: 750px) {
+  .music__buttons {
+    flex-direction: column;
+  }
 }
 
 .music__play {
@@ -15,7 +30,15 @@
   padding: 20px;
   background-color: yellowgreen;
   cursor: pointer;
+  width: 100%;
+  white-space: nowrap;
   transition: color 0.2s;
+}
+
+@media (max-width: 750px) {
+  .music__play {
+    padding: 10px;
+  }
 }
 
 .music__play:hover,
@@ -29,4 +52,10 @@
 
 .music__play:not(:last-child) {
   margin-right: 20px;
+}
+
+@media (max-width: 750px) {
+  .music__play:not(:last-child) {
+    margin-bottom: 10px;
+  }
 }
