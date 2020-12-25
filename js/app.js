@@ -119,6 +119,13 @@ const State = {
       if (skyState) {
         $(`#${skyState}`)[0].checked = true;
       }
+
+      $("html, body").animate(
+        {
+          scrollTop: $("#moon").offset().top,
+        },
+        350
+      );
     }
 
     this.watch();
