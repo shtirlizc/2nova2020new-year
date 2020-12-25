@@ -1372,10 +1372,12 @@
 
 .footer label {
   margin: 0;
+  font-size: 20px;
 }
 
 .settings__share {
   outline: 0;
+  font-size: 18px;
   border: 1px solid #777;
   cursor: pointer;
   padding: 1px 10px 2px;
@@ -1388,7 +1390,7 @@
 
 .title {
   text-transform: uppercase;
-  font-size: 0.8em;
+  font-size: 18px;
   line-height: 1.2;
   letter-spacing: 0.05rem;
   width: 100%;
@@ -1400,12 +1402,19 @@
   margin-top: 0;
   margin-right: 0;
   text-align: center;
+  font-size: 24px;
+}
+
+@media (max-width: 750px) {
+  .title.h1 {
+    font-size: 20px;
+  }
 }
 
 .label {
   display: block;
   padding: 0.4rem 0.4rem;
-  margin: 0.5rem 0.2rem 0;
+  margin: 0.4rem 0.2rem 0;
   bottom: 0;
   z-index: 2;
   opacity: 0.5;
@@ -1416,6 +1425,7 @@
   transition: -webkit-transform 250ms;
   transition: transform 250ms;
   transition: transform 250ms, -webkit-transform 250ms;
+  font-size: 16px;
   line-height: 1.2em;
 }
 .label.color {
