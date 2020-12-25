@@ -44,6 +44,16 @@
       sizes="150x150"
       href="favicon/mstile-150x150.png"
     />
+
+    <meta
+      property="og:title"
+      content="Проведи Новый Год с ♥ 2Nova Interactive"
+    />
+    <meta property="og:url" content="Отправь пожелания другим и получи сам" />
+    <meta
+      property="og:image"
+      content="https://2nova2020new-year.shtirlizc.ru/images/team.jpg"
+    />
   </head>
 
   <body style="overflow: hidden">
@@ -455,29 +465,55 @@
         <h1 class="title h1">☞ 🎄 Настрой огоньки по-своему 🎄☜</h1>
         <div class="section">
           <p class="title">Переключения:</p>
-          <label for="slow" class="label">Медленное затухание</label>
-          <label for="steady" class="label">Постоянно горят</label>
-          <label for="half" class="label">Смешанное</label>
-          <label for="frenetic" class="label">Вспышки</label>
+          <label for="slow" class="label" data-switch="slow"
+            >Медленное затухание</label
+          >
+          <label for="steady" class="label" data-switch="steady"
+            >Постоянно горят</label
+          >
+          <label for="half" class="label" data-switch="half">Смешанное</label>
+          <label for="frenetic" class="label" data-switch="frenetic"
+            >Вспышки</label
+          >
         </div>
         <div class="section">
           <p class="title">Огоньки:</p>
-          <label for="red" class="label color">Красный</label>
-          <label for="gold" class="label color">Золотой</label>
-          <label for="blue" class="label color">Голубой</label>
-          <label for="classic" class="label color">Классический</label>
-          <label for="white" class="label color">Белый</label>
+          <label for="red" class="label color" data-tree="red">Красный</label>
+          <label for="gold" class="label color" data-tree="gold">Золотой</label>
+          <label for="blue" class="label color" data-tree="blue">Голубой</label>
+          <label for="classic" class="label color" data-tree="classic"
+            >Классический</label
+          >
+          <label for="white" class="label color" data-tree="white">Белый</label>
         </div>
         <div class="section sky">
           <p class="title">Небо:</p>
-          <label for="teal" class="label color">Бирюзовый</label>
-          <label for="warm" class="label color">Теплый</label>
-          <label for="crystal" class="label color">Темно</label>
-          <label for="daytime" class="label color">День</label>
-          <label for="dark" class="label color">Ночь</label>
+          <label for="teal" class="label color" data-sky="teal"
+            >Бирюзовый</label
+          >
+          <label for="warm" class="label color" data-sky="warm">Теплый</label>
+          <label for="crystal" class="label color" data-sky="crystal"
+            >Темно</label
+          >
+          <label for="daytime" class="label color" data-sky="daytime"
+            >День</label
+          >
+          <label for="dark" class="label color" data-sky="dark">Ночь</label>
         </div>
         <div class="footer">
           <label for="letItSnow" class="label letItSnow">Снег!</label>
+          <button id="share" class="settings__share">Скопировать ссылку</button>
+          <div
+            style="
+              overflow: hidden;
+              position: absolute;
+              width: 1px;
+              height: 1px;
+              opacity: 0;
+            "
+          >
+            <input type="text" id="share-input" />
+          </div>
         </div>
       </div>
     </div>

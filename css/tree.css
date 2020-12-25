@@ -1362,6 +1362,23 @@
   width: 30%;
 }
 
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.footer label {
+  margin: 0;
+}
+
+.settings__share {
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
 .title {
   text-transform: uppercase;
   font-size: 0.8em;

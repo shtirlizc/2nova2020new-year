@@ -77,10 +77,70 @@ const Music = {
   },
 };
 
+const State = {
+  init: function () {
+    if (window.location.search) {
+      let params = new URL(document.location).searchParams;
+      let switchState = params.get("switch");
+      let treeState = params.get("tree");
+      let skyState = params.get("sky");
+
+      if (switchState) {
+        $(`#${switchState}`)[0].checked = true;
+      }
+      if (treeState) {
+        $(`#${treeState}`)[0].checked = true;
+      }
+      if (skyState) {
+        $(`#${skyState}`)[0].checked = true;
+      }
+    }
+
+    this.watch();
+    this.share();
+  },
+  watch: function () {
+    $("._tree .settings label").click(function () {
+      const switchState = $(this).data("switch");
+      const treeState = $(this).data("tree");
+      const skyState = $(this).data("sky");
+
+      var url = new URL(window.location.href);
+      var search_params = url.searchParams;
+
+      if (switchState) search_params.set("switch", switchState);
+      if (treeState) search_params.set("tree", treeState);
+      if (skyState) search_params.set("sky", skyState);
+
+      url.search = search_params.toString();
+      var new_url = url.toString();
+
+      window.history.pushState(
+        {
+          id: "1",
+        },
+        "pageTitle",
+        new_url
+      );
+    });
+  },
+  share: function () {
+    $("#share").click(function () {
+      $("#share-input").val(window.location.href);
+      var copyText = document.getElementById("share-input");
+      copyText.select();
+      document.execCommand("copy");
+
+      console.log("###: buffer", copyText.value);
+    });
+  },
+};
+
 Loading.init();
 
 window.addEventListener("load", (event) => {
   Loading.finish();
+  State.init();
   Music.play();
   Wish.init();
   Tree.watch();
