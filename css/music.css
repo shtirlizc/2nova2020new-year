@@ -2,7 +2,7 @@
   position: fixed;
   left: 40px;
   bottom: 0;
-  z-index: 10;
+  z-index: 18;
 }
 
 @media (max-width: 750px) {
@@ -31,19 +31,49 @@
   background-color: yellowgreen;
   cursor: pointer;
   width: 100%;
+  font-size: 18px;
+  font-weight: bold;
   white-space: nowrap;
-  transition: color 0.2s;
+  border: 1px solid yellowgreen;
+  border-bottom: none;
+  transition: background-color 0.2s, color 0.2s, border 0.2s;
 }
 
 @media (max-width: 750px) {
   .music__play {
     padding: 10px;
+    border: 1px solid #a0d5d3;
+    border-right: none;
   }
+}
+
+.music__play svg {
+  width: 16px;
+  height: 16px;
+}
+
+.music__play svg path {
+  transition: fill 0.2s;
 }
 
 .music__play:hover,
 .music__play.active {
-  color: mediumvioletred;
+  background-color: #b90101;
+  color: white;
+  border-color: white;
+}
+
+@media (max-width: 750px) {
+  .music__play:hover,
+  .music__play.active {
+    border: 1px solid white;
+    border-right: none;
+  }
+}
+
+.music__play:hover svg path,
+.music__play.active svg path {
+  fill: white;
 }
 
 .music__play:active {

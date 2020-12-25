@@ -73,15 +73,19 @@ const Meta = {
 const Music = {
   play: function () {
     $(".music__play").click(function () {
-      const target = $(this).data("target");
-      $(".music__play").removeClass("active");
-      $(this).addClass("active");
-
       $(".music__items audio").each(function () {
         $(this)[0].pause();
         $(this)[0].currentTime = 0;
       });
-      $(".music__items audio")[Number(target)].play();
+
+      $(".music__play").removeClass("active");
+
+      if (!$(this).hasClass("stop-player")) {
+        const target = $(this).data("target");
+        $(this).addClass("active");
+
+        $(".music__items audio")[Number(target)].play();
+      }
     });
   },
 };
