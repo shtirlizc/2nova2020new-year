@@ -61,6 +61,15 @@ const ShowScreen = {
   },
 };
 
+const Meta = {
+  init: function () {
+    $("#meta-image").attr(
+      "content",
+      `${window.location.protocol}//${window.location.host}/images/team.jpg`
+    );
+  },
+};
+
 const Music = {
   play: function () {
     $(".music__play").click(function () {
@@ -140,6 +149,7 @@ Loading.init();
 
 window.addEventListener("load", (event) => {
   Loading.finish();
+  Meta.init();
   State.init();
   Music.play();
   Wish.init();
