@@ -40,7 +40,8 @@
 .wish .cracker__label {
   position: absolute;
   color: white;
-  font-size: 25px;
+  font-size: 30px;
+  font-weight: bold;
   letter-spacing: 2px;
 }
 
