@@ -135,6 +135,10 @@ const State = {
   },
   share: function () {
     $("#share").click(function () {
+      $(this).addClass("active");
+      setTimeout(() => {
+        $("#share").removeClass("active");
+      }, 1500);
       $("#share-input").val(window.location.href);
       var copyText = document.getElementById("share-input");
       copyText.select();

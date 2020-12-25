@@ -1375,8 +1375,15 @@
 }
 
 .settings__share {
+  outline: 0;
+  border: 1px solid #777;
   cursor: pointer;
-  transition: all 0.2s;
+  padding: 1px 10px 2px;
+  transition: background-color 0.5s;
+}
+
+.settings__share.active {
+  background-color: greenyellow;
 }
 
 .title {
