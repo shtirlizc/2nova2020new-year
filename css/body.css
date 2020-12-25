@@ -1,3 +1,35 @@
+:root {
+  --bg1-teal: rgb(2, 21, 25);
+  --bg2-teal: rgb(43, 68, 70);
+  --bg1-warm: rgb(11, 13, 35);
+  --bg2-warm: rgb(190, 70, 61);
+  --bg1-crystal: rgb(5, 14, 23);
+  --bg2-crystal: rgb(25, 65, 88);
+  --bg1-daytime: rgb(30, 87, 146);
+  --bg2-daytime: rgb(111, 180, 224);
+  --bg1-dark: rgb(15, 10, 10);
+  --bg2-dark: rgb(63, 59, 54);
+  --moon: rgba(234, 201, 188, 0.95);
+  --light-red: rgb(197, 54, 47);
+  --light-red-secondary: rgb(252, 136, 113);
+  --light-gold: rgb(242, 207, 118);
+  --light-gold-secondary: rgb(249, 240, 211);
+  --light-blue: rgb(139, 223, 245);
+  --light-blue-secondary: rgb(215, 245, 255);
+  --light-classic: rgb(102, 136, 101);
+  --light-classic-secondary: rgb(182, 52, 46);
+  --light-white: rgb(250, 250, 250);
+  --light-white-secondary: rgb(160, 160, 160);
+  --light-cream: palegoldenrod;
+  --light-cream-secondary: lightgoldenrodyellow;
+  --speed: 3s;
+  --speedInvert: -3s;
+  --width: 2rem;
+  --height: 1rem;
+  --cloudX: 0rem;
+  --cloudY: 0rem;
+}
+
 ::selection {
   background: rgba(255, 255, 0, 0.5);
 }

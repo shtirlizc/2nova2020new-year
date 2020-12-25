@@ -22,14 +22,21 @@
   align-items: center;
 }
 
-.wish .cracker:hover .cracker-left {
+.wish .cracker__label {
+  position: absolute;
+  color: white;
+  font-size: 25px;
+  letter-spacing: 2px;
+}
+
+.wish .cracker.active .cracker-left {
   left: -7.5em;
   top: 3.125em;
   -webkit-transform: rotate(-15deg);
   transform: rotate(-15deg);
 }
 
-.wish .cracker:hover .cracker-right {
+.wish .cracker.active .cracker-right {
   right: -7.5em;
   top: 3.125em;
   -webkit-transform: rotate(15deg);

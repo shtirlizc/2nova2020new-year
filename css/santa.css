@@ -1,8 +1,24 @@
 .start {
+  position: relative;
   display: grid;
   place-items: center;
   min-height: 100vh;
-  padding: 10vh 0;
+  padding: 100px 0 250px;
+}
+
+.start::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(25, 65, 88, 0),
+    rgba(25, 65, 88, 1)
+  );
+  pointer-events: none;
 }
 
 .start__content {
