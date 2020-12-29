@@ -1,0 +1,172 @@
+.results {
+  position: relative;
+  background-position: center center;
+  height: 100vh;
+}
+
+.results div.business-card {
+  height: 427px;
+  width: 320px;
+  margin-left: -160px;
+  margin-top: -213.5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  perspective: 1000;
+}
+
+.results div.business-card:hover .flipper,
+.results div.business-card.hover .flipper {
+  transform: rotateY(180deg) rotateZ(90deg);
+}
+
+.results div.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+  transform-origin: center 160px;
+}
+
+.results div.front,
+.results div.back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 427px;
+  width: 320px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.75);
+}
+
+.results div.front {
+  background-color: white;
+  z-index: 0;
+}
+
+.results div.front:before,
+.results div.front:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-width: 160px;
+  border-style: solid;
+  border-color: transparent;
+}
+
+.results div.front:before {
+  border-top-color: #288fbd;
+  border-left-color: #288fbd;
+  z-index: 2;
+}
+
+.results div.front:after {
+  border-top-color: #005d8c;
+  border-right-color: #005d8c;
+}
+
+.results div.front div.name {
+  position: absolute;
+  bottom: 8.5px;
+  left: 85px;
+}
+
+.results div.front div.name span {
+  display: block;
+  font-size: 40px;
+  line-height: 45px;
+}
+
+.results div.front div.name span.first {
+  color: #005d8c;
+}
+
+.results div.front div.name span.last {
+  color: #288fbd;
+}
+
+.results div.front div.name span.title {
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.results div.back {
+  background-color: #005d8c;
+  color: white;
+  width: 427px;
+  height: 320px;
+  box-sizing: border-box;
+  transform: rotateY(180deg) rotateZ(90deg);
+}
+
+.results div.back div.container-sm {
+  float: left;
+  width: 40%;
+  height: 100%;
+  position: relative;
+}
+
+.results div.back div.container-lg {
+  float: left;
+  width: 60%;
+  margin-top: 2rem;
+}
+
+.results div.back figure.logo-white {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  height: 120px;
+  display: block;
+  margin: -60px -60px;
+}
+
+.results div.back figure.logo-white:before,
+.results div.back figure.logo-white:after {
+  display: block;
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-color: transparent;
+}
+
+.results div.back figure.logo-white:before {
+  top: 0;
+  left: 0;
+  border-width: 60px;
+  border-top-color: white;
+  border-left-color: white;
+  z-index: 2;
+}
+
+.results div.back figure.logo-white:after {
+  bottom: 0;
+  right: 0;
+  border-width: 56px;
+  border-right-color: white;
+}
+
+.results div.back a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.results div.back a:hover {
+  text-decoration: underline;
+}
+
+.results div.back ul.social {
+  font-size: 1.25rem;
+}
+
+.results div.back ul.social li {
+  margin-top: 1rem;
+}
+
+.results div.back ul.social li:first-child {
+  margin-top: 2rem;
+}
