@@ -1,21 +1,16 @@
 .results {
   position: relative;
-  background-position: center center;
-  height: 100vh;
 }
 
 .results div.business-card {
   height: 427px;
   width: 320px;
-  margin-left: -160px;
-  margin-top: -213.5px;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  perspective: 1000;
+  top: 0;
+  left: calc(50% - 160px);
+  cursor: pointer;
 }
 
-.results div.business-card:hover .flipper,
 .results div.business-card.hover .flipper {
   transform: rotateY(180deg) rotateZ(90deg);
 }
@@ -70,7 +65,9 @@
 .results div.front div.name {
   position: absolute;
   bottom: 8.5px;
-  left: 85px;
+  left: 50%;
+  transform: translate(-50%);
+  text-align: center;
 }
 
 .results div.front div.name span {
@@ -88,8 +85,10 @@
 }
 
 .results div.front div.name span.title {
-  font-size: 20px;
+  font-size: 24px;
   line-height: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 .results div.back {
@@ -111,17 +110,16 @@
 .results div.back div.container-lg {
   float: left;
   width: 60%;
-  margin-top: 2rem;
 }
 
 .results div.back figure.logo-white {
   position: absolute;
-  top: 50%;
+  top: 3rem;
   left: 50%;
   width: 120px;
   height: 120px;
   display: block;
-  margin: -60px -60px;
+  margin: 0 -60px;
 }
 
 .results div.back figure.logo-white:before,
@@ -169,4 +167,18 @@
 
 .results div.back ul.social li:first-child {
   margin-top: 2rem;
+}
+
+.results__text {
+  margin: 0;
+  padding-right: 20px;
+  font-size: 22px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  max-height: 320px;
+  padding-top: 2rem;
+}
+
+.results__text::-webkit-scrollbar {
+  display: none;
 }

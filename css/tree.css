@@ -93,6 +93,7 @@
     to(#3a3576)
   );
   background-image: linear-gradient(#1f1d3b, #3a3576 85%, transparent);
+  background-image: linear-gradient(#1f1d3b, #3a3576);
   background-image: -webkit-gradient(
     linear,
     left top,
@@ -101,6 +102,7 @@
     to(var(--bg2))
   );
   background-image: linear-gradient(var(--bg1), var(--bg2) 85%, transparent);
+  background-image: linear-gradient(var(--bg1), var(--bg2));
 }
 
 .radio {
@@ -1405,7 +1407,7 @@
   background-color: greenyellow;
 }
 
-.title {
+._tree .title {
   text-transform: uppercase;
   font-size: 18px;
   line-height: 1.2;
@@ -1413,7 +1415,7 @@
   width: 100%;
   margin-top: 1.5rem;
 }
-.title.h1 {
+._tree .title.h1 {
   margin: 0;
   text-align: center;
   font-size: 24px;
@@ -1421,7 +1423,7 @@
 }
 
 @media (max-width: 750px) {
-  .title.h1 {
+  ._tree .title.h1 {
     font-size: 20px;
   }
 }

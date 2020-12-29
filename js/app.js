@@ -172,6 +172,123 @@ const State = {
   },
 };
 
+const Results = {
+  data: [
+    {
+      fistName: "Андрей",
+      lastName: "Елпаев",
+      from: "от Насти",
+      message:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, deserunt doloribus ducimus labore quisquam tempora velit! Deleniti laborum laudantium praesentium suscipit! Deserunt iure molestiae nemo ratione sunt? Asperiores, dolor, tempore.",
+    },
+    {
+      fistName: "Андрей",
+      lastName: "Елпаев",
+      from: "от Насти",
+      message:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, deserunt doloribus ducimus labore quisquam tempora velit! Deleniti laborum laudantium praesentium suscipit! Deserunt iure molestiae nemo ratione sunt? Asperiores, dolor, tempore.",
+    },
+    {
+      fistName: "Андрей",
+      lastName: "Елпаев",
+      from: "от Насти",
+      message:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, deserunt doloribus ducimus labore quisquam tempora velit! Deleniti laborum laudantium praesentium suscipit! Deserunt iure molestiae nemo ratione sunt? Asperiores, dolor, tempore.",
+    },
+    {
+      fistName: "Андрей",
+      lastName: "Елпаев",
+      from: "от Насти",
+      message:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, deserunt doloribus ducimus labore quisquam tempora velit! Deleniti laborum laudantium praesentium suscipit! Deserunt iure molestiae nemo ratione sunt? Asperiores, dolor, tempore.",
+    },
+    {
+      fistName: "Андрей",
+      lastName: "Елпаев",
+      from: "от Насти",
+      message:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, deserunt doloribus ducimus labore quisquam tempora velit! Deleniti laborum laudantium praesentium suscipit! Deserunt iure molestiae nemo ratione sunt? Asperiores, dolor, tempore.",
+    },
+  ],
+  addItem: function (item) {
+    // front
+    const firstName = document.createElement("span");
+    firstName.classList.add("first");
+    firstName.innerText = item.fistName;
+    const lastName = document.createElement("span");
+    lastName.classList.add("last");
+    lastName.innerText = item.lastName;
+    const from = document.createElement("span");
+    from.classList.add("title");
+    from.innerText = item.from;
+
+    const nameWrap = document.createElement("div");
+    nameWrap.classList.add("name");
+    nameWrap.appendChild(firstName);
+    nameWrap.appendChild(lastName);
+    nameWrap.appendChild(from);
+
+    const front = document.createElement("div");
+    front.classList.add("front");
+    front.appendChild(nameWrap);
+
+    // back
+    const logo = document.createElement("figure");
+    logo.classList.add("logo-white");
+
+    const logoWrap = document.createElement("div");
+    logoWrap.classList.add("container-sm");
+    logoWrap.appendChild(logo);
+
+    const message = document.createElement("p");
+    message.classList.add("results__text");
+    message.innerText = item.message;
+
+    const messageWrap = document.createElement("div");
+    messageWrap.classList.add("container-lg");
+    messageWrap.appendChild(message);
+
+    const back = document.createElement("div");
+    back.classList.add("back");
+    back.appendChild(logoWrap);
+    back.appendChild(messageWrap);
+
+    // wrappers
+    const flipper = document.createElement("div");
+    flipper.classList.add("flipper");
+    flipper.appendChild(front);
+    flipper.appendChild(back);
+
+    const businessCard = document.createElement("div");
+    businessCard.classList.add("business-card");
+    businessCard.appendChild(flipper);
+
+    const results = document.createElement("div");
+    results.classList.add("results");
+    results.appendChild(businessCard);
+
+    const lettersItem = document.createElement("div");
+    lettersItem.classList.add("letters__item");
+    lettersItem.appendChild(results);
+
+    return lettersItem;
+  },
+  init: function () {
+    const letters = document.querySelector(".letters__items");
+
+    this.data.map((item) => {
+      letters.appendChild(this.addItem(item));
+    });
+
+    this.watch();
+  },
+  watch: function () {
+    $(".business-card").click(function () {
+      $(this).toggleClass("hover");
+    });
+  },
+};
+
 Loading.init();
 
 window.addEventListener("load", (event) => {
@@ -181,4 +298,5 @@ window.addEventListener("load", (event) => {
   Music.play();
   Wish.init();
   Tree.watch();
+  Results.init();
 });
