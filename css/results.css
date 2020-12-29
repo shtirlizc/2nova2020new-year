@@ -52,14 +52,14 @@
 }
 
 .results div.front:before {
-  border-top-color: #288fbd;
-  border-left-color: #288fbd;
+  border-top-color: #c2e2e1;
+  border-left-color: #c2e2e1;
   z-index: 2;
 }
 
 .results div.front:after {
-  border-top-color: #005d8c;
-  border-right-color: #005d8c;
+  border-top-color: #a0d5d3;
+  border-right-color: #a0d5d3;
 }
 
 .results div.front div.name {
@@ -92,8 +92,7 @@
 }
 
 .results div.back {
-  background-color: #005d8c;
-  color: white;
+  background-color: white;
   width: 427px;
   height: 320px;
   box-sizing: border-box;
@@ -135,8 +134,8 @@
   top: 0;
   left: 0;
   border-width: 60px;
-  border-top-color: white;
-  border-left-color: white;
+  border-top-color: #a70101;
+  border-left-color: #a70101;
   z-index: 2;
 }
 
@@ -144,7 +143,7 @@
   bottom: 0;
   right: 0;
   border-width: 56px;
-  border-right-color: white;
+  border-right-color: #b90101;
 }
 
 .results div.back a {
@@ -172,11 +171,15 @@
 .results__text {
   margin: 0;
   padding-right: 20px;
-  font-size: 22px;
+  font-size: 24px;
+  line-height: 1.4em;
   overflow-x: hidden;
   overflow-y: scroll;
   max-height: 320px;
   padding-top: 2rem;
+  color: #005d8c;
+  font-weight: bold;
+  padding-bottom: 20px;
 }
 
 .results__text::-webkit-scrollbar {
